@@ -34,13 +34,12 @@ public class AEAccordionTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
-    public var expanded = false
+    public private(set) var expanded = false
     
     // MARK: - Public API
     
-    func setExpanded(expanded: Bool, withCompletion completion: (finished: Bool) -> Void) {
+    func setExpanded(expanded: Bool, animated: Bool) {
         self.expanded = expanded
-        completion(finished: true)
     }
 
 }

@@ -49,7 +49,8 @@ public class AEAccordionTableViewController: UITableViewController {
     
     public override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if let cell = cell as? AEAccordionTableViewCell {
-            cell.expanded = expandedIndexPaths.contains(indexPath)
+            let expanded = expandedIndexPaths.contains(indexPath)
+            cell.setExpanded(expanded, animated: false)
         }
     }
     
@@ -64,19 +65,19 @@ public class AEAccordionTableViewController: UITableViewController {
     private func expandCell(cell: AEAccordionTableViewCell, animated: Bool) {
         if let indexPath = tableView.indexPathForCell(cell) {
             if !animated {
-                cell.expanded = true
-                expandedIndexPaths.append(indexPath)
+                cell.setExpanded(true, animated: false)
+                addToExpandedIndexPaths(indexPath)
             } else {
                 CATransaction.begin()
                 
                 CATransaction.setCompletionBlock({ () -> Void in
-                    cell.setExpanded(true, withCompletion: { (finished) -> Void in
-                        return
-                    })
+                    // 2. animate views after expanding
+                    cell.setExpanded(true, animated: true)
                 })
                 
+                // 1. expand cell height
                 tableView.beginUpdates()
-                expandedIndexPaths.append(indexPath)
+                addToExpandedIndexPaths(indexPath)
                 tableView.endUpdates()
                 
                 CATransaction.commit()
@@ -87,21 +88,33 @@ public class AEAccordionTableViewController: UITableViewController {
     private func collapseCell(cell: AEAccordionTableViewCell, animated: Bool) {
         if let indexPath = tableView.indexPathForCell(cell) {
             if !animated {
-                cell.expanded = false
-                if let index = expandedIndexPaths.indexOf(indexPath) {
-                    expandedIndexPaths.removeAtIndex(index)
-                }
+                cell.setExpanded(false, animated: false)
+                removeFromExpandedIndexPaths(indexPath)
             } else {
-                cell.setExpanded(false, withCompletion: { (finished) -> Void in
-                    if finished {
-                        self.tableView.beginUpdates()
-                        if let index = self.expandedIndexPaths.indexOf(indexPath) {
-                            self.expandedIndexPaths.removeAtIndex(index)
-                        }
-                        self.tableView.endUpdates()
-                    }
+                CATransaction.begin()
+                
+                CATransaction.setCompletionBlock({ () -> Void in
+                    // 2. collapse cell height
+                    self.tableView.beginUpdates()
+                    self.removeFromExpandedIndexPaths(indexPath)
+                    self.tableView.endUpdates()
                 })
+                
+                // 2. animate views before collapsing
+                cell.setExpanded(false, animated: true)
+                
+                CATransaction.commit()
             }
+        }
+    }
+    
+    private func addToExpandedIndexPaths(indexPath: NSIndexPath) {
+        expandedIndexPaths.append(indexPath)
+    }
+    
+    private func removeFromExpandedIndexPaths(indexPath: NSIndexPath) {
+        if let index = self.expandedIndexPaths.indexOf(indexPath) {
+            self.expandedIndexPaths.removeAtIndex(index)
         }
     }
 

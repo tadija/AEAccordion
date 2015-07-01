@@ -55,6 +55,7 @@ public class AEXibceptionView: UIView {
 
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        backgroundColor = UIColor.clearColor()
         addSubview(contentView)
     }
 
