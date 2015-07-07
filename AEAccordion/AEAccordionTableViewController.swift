@@ -100,7 +100,7 @@ public class AEAccordionTableViewController: UITableViewController {
                     self.tableView.endUpdates()
                 })
                 
-                // 2. animate views before collapsing
+                // 1. animate views before collapsing
                 cell.setExpanded(false, animated: true)
                 
                 CATransaction.commit()
