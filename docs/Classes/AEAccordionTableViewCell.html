@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AEAccordionTableViewCell Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/AEAccordionTableViewCell" class="dashAnchor"></a>
+    <a title="AEAccordionTableViewCell Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AEAccordion Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/tadija/AEAccordion"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AEAccordion Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AEAccordionTableViewCell Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+          <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AEAccordionTableViewCell.html">AEAccordionTableViewCell</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AEAccordionTableViewController.html">AEAccordionTableViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AEXibceptionView.html">AEXibceptionView</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AEAccordionTableViewCell</h1>
+            <p>This class is used as a expandable <code>UITableViewCell</code> for <code>AEAccordionTableViewController</code>.</p>
+
+<p>Just subclass it and override setter of the <code>expanded</code> property to update UI based on this property.</p>
+
+<p>You can also override <code>setExpanded:withCompletion:</code> in order to animate this UI update.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Properties"></a>
+                  <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                  <a href="#/Properties">
+                    <h3 class="section-name">Properties</h3>
+                  </a>
+                </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC11AEAccordion24AEAccordionTableViewCell8expandedSb"></a>
+                    <a name="//apple_ref/swift/Property/expanded" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC11AEAccordion24AEAccordionTableViewCell8expandedSb">expanded</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag which tells if the cell is expanded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">expanded</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Actions"></a>
+                  <a name="//apple_ref/swift/Section/Actions" class="dashAnchor"></a>
+                  <a href="#/Actions">
+                    <h3 class="section-name">Actions</h3>
+                  </a>
+                </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC11AEAccordion24AEAccordionTableViewCell11setExpandedFS0_FTSb8animatedSb_T_"></a>
+                    <a name="//apple_ref/swift/Method/setExpanded(_:animated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC11AEAccordion24AEAccordionTableViewCell11setExpandedFS0_FTSb8animatedSb_T_">setExpanded(_:animated:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Public setter of the <code>expanded</code> property (this should be overriden by a subclass for custom UI update)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setExpanded</span><span class="p">(</span><span class="nv">expanded</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expanded</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>true</code> if the cell should be expanded, <code>false</code> if it should be collapsed.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animated</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If <code>true</code> action should be animated.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2015 <a class="link" href="http://tadija.net" target="_blank" rel="external">tadija</a>. All rights reserved. (Last updated: 2015-07-11)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.2.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
