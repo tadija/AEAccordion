@@ -25,27 +25,31 @@
 import UIKit
 
 /**
-    This class is used for building nested XIB files (Xibception)
+    This class is used for building nested XIB files **(Xibception)**
 
-    Example - Imagine that we have next files:
-    * FirstView.swift, FirstView.xib
-    * SecondView.swift, SecondView.xib
-    * CustomCell.swift, CustomCell.xib
-    Our goal is to add FirstView and SecondView to CustomCell.xib,
+    For example, imagine that we have next files:
+
+    - FirstView.swift, FirstView.xib
+    - SecondView.swift, SecondView.xib
+    - CustomCell.swift, CustomCell.xib
+
+    Our goal is to add **FirstView** and **SecondView** to **CustomCell.xib**,
     but to load these views from their XIB files instead from code.
 
     These are the steps:
-    1. FirstView and SecondView must inherit from XibceptionView
-    2. In their XIB files File's Owner must be set to their class (FirstView, SecondView)
-    3. In their XIB files root view should be connected to File's Owner contentView property
-    4. In cell's XIB file File's Owner and Cell itself must be set to CustomCell class
-    5. Add views to CustomCell.xib and set their class to FirstView and SecondView
+
+    - FirstView and SecondView must inherit from `AEXibceptionView`
+    - In their XIB files File's Owner must be set to their class (`FirstView`, `SecondView`)
+    - In their XIB files root view should be connected to File's Owner `contentView` property
+    - In cell's XIB file File's Owner and Cell itself must be set to `CustomCell` class
+    - Add views to CustomCell.xib and set their class to `FirstView` and `SecondView`
 */
 
 public class AEXibceptionView: UIView {
     
     // MARK: - Properties
     
+    /// View outlet that should be connected from the File's owner in storyboard.
     @IBOutlet public lazy var contentView: UIView! = {
         let className = NSStringFromClass(self.dynamicType).componentsSeparatedByString(".").last
         return NSBundle.mainBundle().loadNibNamed(className, owner: self, options: nil).first as! UIView
@@ -53,6 +57,13 @@ public class AEXibceptionView: UIView {
     
     // MARK: - Lifecycle
 
+    /**
+        `AEXibceptionView` will add representation of self **from XIB** as the `contentView` property.
+    
+        Returns an object initialized from data in a given unarchiver. (required)
+    
+        :param: aDecoder An unarchiver object.
+    */
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         backgroundColor = UIColor.clearColor()

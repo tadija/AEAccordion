@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CustomTableViewCell: AEAccordionTableViewCell {
+class CustomTableViewCell: AEAccordionTableViewCell {
     
     // MARK: - Outlets
     

@@ -25,20 +25,29 @@
 import UIKit
 
 /**
-    This class is used as expandable UITableViewCell for AEAccordionTableViewController.
-    Just subclass it and override setter of expanded property to update UI based on this property.
-    You can also override setExpanded:withCompletion: in order to animate this UI update.
+    This class is used as a expandable `UITableViewCell` for `AEAccordionTableViewController`.
+
+    Just subclass it and override setter of the `expanded` property to update UI based on this property.
+
+    You can also override `setExpanded:withCompletion:` in order to animate this UI update.
 */
 
 public class AEAccordionTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
+    /// Flag which tells if the cell is expanded.
     public private(set) var expanded = false
     
-    // MARK: - Public API
+    // MARK: - Actions
     
-    func setExpanded(expanded: Bool, animated: Bool) {
+    /**
+        Public setter of the `expanded` property (this should be overriden by a subclass for custom UI update)
+    
+        :param: expanded `true` if the cell should be expanded, `false` if it should be collapsed.
+        :param: animated If `true` action should be animated.
+    */
+    public func setExpanded(expanded: Bool, animated: Bool) {
         self.expanded = expanded
     }
 
