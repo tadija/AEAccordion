@@ -28,9 +28,9 @@ import UIKit
     This class is used for building nested XIB files (Xibception)
 
     Example - Imagine that we have next files:
-    * FirstView.h, FirstView.m, FirstView.xib
-    * SecondView.h, SecondView.m, SecondView.xib
-    * CustomCell.h, CustomCell.m, CustomCell.xib
+    * FirstView.swift, FirstView.xib
+    * SecondView.swift, SecondView.xib
+    * CustomCell.swift, CustomCell.xib
     Our goal is to add FirstView and SecondView to CustomCell.xib,
     but to load these views from their XIB files instead from code.
 

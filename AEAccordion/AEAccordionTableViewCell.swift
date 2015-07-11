@@ -25,7 +25,7 @@
 import UIKit
 
 /**
-    This class is used for accordion effect in UITableView.
+    This class is used as expandable UITableViewCell for AEAccordionTableViewController.
     Just subclass it and override setter of expanded property to update UI based on this property.
     You can also override setExpanded:withCompletion: in order to animate this UI update.
 */

@@ -25,8 +25,9 @@
 import UIKit
 
 /**
-    This class is used for accordion effect in UITableView.
-    Just subclass it and implement tableView:heightForRowAtIndexPath: method (based on information in expandedIndexPaths property).
+    This class is used for accordion effect in UITableViewController.
+    Just subclass it and implement tableView:heightForRowAtIndexPath:
+    (based on information in expandedIndexPaths property).
 */
 
 public class AEAccordionTableViewController: UITableViewController {
