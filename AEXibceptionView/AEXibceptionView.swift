@@ -64,7 +64,7 @@ public class AEXibceptionView: UIView {
     
         :param: aDecoder An unarchiver object.
     */
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         backgroundColor = UIColor.clearColor()
         addSubview(contentView)
