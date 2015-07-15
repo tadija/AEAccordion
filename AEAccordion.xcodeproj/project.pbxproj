@@ -67,6 +67,8 @@
 		8B55D0EF1B3E33BF00641110 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8B55D0F11B3E37C100641110 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8B55D0F21B3E37C100641110 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8BF6C12F1B56F6AE00C25979 /* AEAccordion.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AEAccordion.podspec; sourceTree = "<group>"; };
+		8BF6C1301B56F6AE00C25979 /* AEXibceptionView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AEXibceptionView.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,8 @@
 				8B55D0A91B3E331200641110 /* Products */,
 				8B55D0F11B3E37C100641110 /* LICENSE */,
 				8B55D0F21B3E37C100641110 /* README.md */,
+				8BF6C12F1B56F6AE00C25979 /* AEAccordion.podspec */,
+				8BF6C1301B56F6AE00C25979 /* AEXibceptionView.podspec */,
 			);
 			sourceTree = "<group>";
 		};
