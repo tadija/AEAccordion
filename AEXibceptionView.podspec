@@ -4,7 +4,7 @@ s.version = '1.0.0'
 s.license = { :type => 'MIT', :file => 'LICENSE' }
 s.summary = 'Nested XIB files (XIB inside XIB)'
 
-s.homepage = 'https://github.com/tadija/AEAccordion'
+s.homepage = 'https://github.com/tadija/AEAccordion/tree/master/AEXibceptionView'
 s.author = { 'Marko Tadić' => 'tadija@me.com' }
 s.social_media_url = 'http://twitter.com/tadija'
 
