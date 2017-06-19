@@ -26,8 +26,8 @@ class SampleTableViewController: AEAccordionTableViewController {
     // MARK: Helpers
     
     func registerCell() {
-        let cellNib = UINib(nibName: CustomTableViewCell.reuseIdentifier, bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: CustomTableViewCell.reuseIdentifier)
+        let cellNib = UINib(nibName: SampleTableViewCell.reuseIdentifier, bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: SampleTableViewCell.reuseIdentifier)
     }
     
     func expandFirstCell() {
@@ -42,10 +42,12 @@ class SampleTableViewController: AEAccordionTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.reuseIdentifier, for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: SampleTableViewCell.reuseIdentifier, for: indexPath)
         
-        cell.day.text = days[indexPath.row]
-        cell.weatherIcon.image = UIImage(named: "0\(indexPath.row + 1)")
+        if let cell = cell as? SampleTableViewCell {
+            cell.day.text = days[indexPath.row]
+            cell.weatherIcon.image = UIImage(named: "0\(indexPath.row + 1)")
+        }
         
         return cell
     }

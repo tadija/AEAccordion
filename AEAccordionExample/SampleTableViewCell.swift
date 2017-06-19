@@ -1,5 +1,5 @@
 //
-//  CustomTableViewCell.swift
+//  SampleTableViewCell.swift
 //  AEAccordion
 //
 //  Created by Marko Tadic on 6/26/15.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class CustomTableViewCell: AEAccordionTableViewCell {
+class SampleTableViewCell: AEAccordionTableViewCell {
     
-    static let reuseIdentifier = "CustomTableViewCell"
+    static let reuseIdentifier = "SampleTableViewCell"
     
     // MARK: Outlets
     
@@ -33,10 +33,12 @@ class CustomTableViewCell: AEAccordionTableViewCell {
         if !animated {
             toggleCell()
         } else {
-            let alwaysOptions: UIViewAnimationOptions = [.allowUserInteraction, .beginFromCurrentState, .transitionCrossDissolve]
+            let alwaysOptions: UIViewAnimationOptions = [.allowUserInteraction,
+                                                         .beginFromCurrentState,
+                                                         .transitionCrossDissolve]
             let expandedOptions: UIViewAnimationOptions = [.transitionFlipFromTop, .curveEaseOut]
             let collapsedOptions: UIViewAnimationOptions = [.transitionFlipFromBottom, .curveEaseIn]
-            let options: UIViewAnimationOptions = expanded ? alwaysOptions.union(expandedOptions) : alwaysOptions.union(collapsedOptions)
+            let options = expanded ? alwaysOptions.union(expandedOptions) : alwaysOptions.union(collapsedOptions)
             
             UIView.transition(with: detailView, duration: 0.3, options: options, animations: { () -> Void in
                 self.toggleCell()
@@ -48,7 +50,7 @@ class CustomTableViewCell: AEAccordionTableViewCell {
     
     fileprivate func toggleCell() {
         detailView.isHidden = !expanded
-        arrow.transform = expanded ? CGAffineTransform(rotationAngle: CGFloat.pi) : CGAffineTransform.identity
+        arrow.transform = expanded ? CGAffineTransform(rotationAngle: CGFloat.pi) : .identity
     }
     
 }

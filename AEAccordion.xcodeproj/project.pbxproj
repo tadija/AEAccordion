@@ -9,16 +9,11 @@
 /* Begin PBXBuildFile section */
 		8B54CF9D1B446BB100F8992A /* AEAccordionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54CF9B1B446BB100F8992A /* AEAccordionTableViewCell.swift */; };
 		8B54CF9E1B446BB100F8992A /* AEAccordionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54CF9C1B446BB100F8992A /* AEAccordionTableViewController.swift */; };
-		8B54CFA11B446BC100F8992A /* AEXibceptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54CFA01B446BC100F8992A /* AEXibceptionView.swift */; };
 		8B55D0AC1B3E331200641110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0AB1B3E331200641110 /* AppDelegate.swift */; };
 		8B55D0B31B3E331200641110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0B21B3E331200641110 /* Assets.xcassets */; };
 		8B55D0B61B3E331200641110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0B41B3E331200641110 /* LaunchScreen.storyboard */; };
-		8B55D0E71B3E33A400641110 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0E01B3E33A400641110 /* HeaderView.swift */; };
-		8B55D0E81B3E33A400641110 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0E11B3E33A400641110 /* HeaderView.xib */; };
-		8B55D0E91B3E33A400641110 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0E21B3E33A400641110 /* DetailView.swift */; };
-		8B55D0EA1B3E33A400641110 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0E31B3E33A400641110 /* DetailView.xib */; };
-		8B55D0EB1B3E33A400641110 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0E41B3E33A400641110 /* CustomTableViewCell.swift */; };
-		8B55D0EC1B3E33A400641110 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0E51B3E33A400641110 /* CustomTableViewCell.xib */; };
+		8B55D0EB1B3E33A400641110 /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0E41B3E33A400641110 /* SampleTableViewCell.swift */; };
+		8B55D0EC1B3E33A400641110 /* SampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0E51B3E33A400641110 /* SampleTableViewCell.xib */; };
 		8B55D0ED1B3E33A400641110 /* SampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0E61B3E33A400641110 /* SampleTableViewController.swift */; };
 		8B55D0F01B3E33BF00641110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0EF1B3E33BF00641110 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -26,24 +21,18 @@
 /* Begin PBXFileReference section */
 		8B54CF9B1B446BB100F8992A /* AEAccordionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAccordionTableViewCell.swift; sourceTree = "<group>"; };
 		8B54CF9C1B446BB100F8992A /* AEAccordionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAccordionTableViewController.swift; sourceTree = "<group>"; };
-		8B54CFA01B446BC100F8992A /* AEXibceptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEXibceptionView.swift; sourceTree = "<group>"; };
 		8B55D0A81B3E331200641110 /* AEAccordion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEAccordion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B55D0AB1B3E331200641110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B55D0B21B3E331200641110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B55D0B51B3E331200641110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B55D0B71B3E331200641110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B55D0E01B3E33A400641110 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		8B55D0E11B3E33A400641110 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
-		8B55D0E21B3E33A400641110 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		8B55D0E31B3E33A400641110 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
-		8B55D0E41B3E33A400641110 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		8B55D0E51B3E33A400641110 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		8B55D0E41B3E33A400641110 /* SampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
+		8B55D0E51B3E33A400641110 /* SampleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleTableViewCell.xib; sourceTree = "<group>"; };
 		8B55D0E61B3E33A400641110 /* SampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewController.swift; sourceTree = "<group>"; };
 		8B55D0EF1B3E33BF00641110 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8B55D0F11B3E37C100641110 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8B55D0F21B3E37C100641110 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8BF6C12F1B56F6AE00C25979 /* AEAccordion.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AEAccordion.podspec; sourceTree = "<group>"; };
-		8BF6C1301B56F6AE00C25979 /* AEXibceptionView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AEXibceptionView.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,25 +55,15 @@
 			path = AEAccordion;
 			sourceTree = "<group>";
 		};
-		8B54CF9F1B446BC100F8992A /* AEXibceptionView */ = {
-			isa = PBXGroup;
-			children = (
-				8B54CFA01B446BC100F8992A /* AEXibceptionView.swift */,
-			);
-			path = AEXibceptionView;
-			sourceTree = "<group>";
-		};
 		8B55D09F1B3E331200641110 = {
 			isa = PBXGroup;
 			children = (
 				8B54CF9A1B446BB100F8992A /* AEAccordion */,
-				8B54CF9F1B446BC100F8992A /* AEXibceptionView */,
 				8B55D0AA1B3E331200641110 /* AEAccordionExample */,
 				8B55D0A91B3E331200641110 /* Products */,
 				8B55D0F11B3E37C100641110 /* LICENSE */,
 				8B55D0F21B3E37C100641110 /* README.md */,
 				8BF6C12F1B56F6AE00C25979 /* AEAccordion.podspec */,
-				8BF6C1301B56F6AE00C25979 /* AEXibceptionView.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,15 +78,11 @@
 		8B55D0AA1B3E331200641110 /* AEAccordionExample */ = {
 			isa = PBXGroup;
 			children = (
-				8B55D0E01B3E33A400641110 /* HeaderView.swift */,
-				8B55D0E11B3E33A400641110 /* HeaderView.xib */,
-				8B55D0E21B3E33A400641110 /* DetailView.swift */,
-				8B55D0E31B3E33A400641110 /* DetailView.xib */,
-				8B55D0E41B3E33A400641110 /* CustomTableViewCell.swift */,
-				8B55D0E51B3E33A400641110 /* CustomTableViewCell.xib */,
-				8B55D0E61B3E33A400641110 /* SampleTableViewController.swift */,
+				8B55D0AB1B3E331200641110 /* AppDelegate.swift */,
 				8B55D0EF1B3E33BF00641110 /* Main.storyboard */,
-				8B55D0B21B3E331200641110 /* Assets.xcassets */,
+				8B55D0E61B3E33A400641110 /* SampleTableViewController.swift */,
+				8B55D0E41B3E33A400641110 /* SampleTableViewCell.swift */,
+				8B55D0E51B3E33A400641110 /* SampleTableViewCell.xib */,
 				8B55D0D91B3E333E00641110 /* Supporting Files */,
 			);
 			path = AEAccordionExample;
@@ -116,8 +91,8 @@
 		8B55D0D91B3E333E00641110 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8B55D0AB1B3E331200641110 /* AppDelegate.swift */,
 				8B55D0B41B3E331200641110 /* LaunchScreen.storyboard */,
+				8B55D0B21B3E331200641110 /* Assets.xcassets */,
 				8B55D0B71B3E331200641110 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -184,9 +159,7 @@
 				8B55D0F01B3E33BF00641110 /* Main.storyboard in Resources */,
 				8B55D0B61B3E331200641110 /* LaunchScreen.storyboard in Resources */,
 				8B55D0B31B3E331200641110 /* Assets.xcassets in Resources */,
-				8B55D0EC1B3E33A400641110 /* CustomTableViewCell.xib in Resources */,
-				8B55D0E81B3E33A400641110 /* HeaderView.xib in Resources */,
-				8B55D0EA1B3E33A400641110 /* DetailView.xib in Resources */,
+				8B55D0EC1B3E33A400641110 /* SampleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,13 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B54CF9D1B446BB100F8992A /* AEAccordionTableViewCell.swift in Sources */,
-				8B55D0E71B3E33A400641110 /* HeaderView.swift in Sources */,
-				8B55D0E91B3E33A400641110 /* DetailView.swift in Sources */,
 				8B55D0ED1B3E33A400641110 /* SampleTableViewController.swift in Sources */,
-				8B55D0EB1B3E33A400641110 /* CustomTableViewCell.swift in Sources */,
+				8B55D0EB1B3E33A400641110 /* SampleTableViewCell.swift in Sources */,
 				8B55D0AC1B3E331200641110 /* AppDelegate.swift in Sources */,
 				8B54CF9E1B446BB100F8992A /* AEAccordionTableViewController.swift in Sources */,
-				8B54CFA11B446BC100F8992A /* AEXibceptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
