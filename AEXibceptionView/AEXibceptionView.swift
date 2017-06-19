@@ -45,14 +45,14 @@ import UIKit
     - Add views to CustomCell.xib and set their class to `FirstView` and `SecondView`
 */
 
-public class AEXibceptionView: UIView {
+open class AEXibceptionView: UIView {
     
     // MARK: - Properties
     
     /// View outlet that should be connected from the File's owner in storyboard.
-    @IBOutlet public lazy var contentView: UIView! = {
-        let className = NSStringFromClass(self.dynamicType).componentsSeparatedByString(".").last
-        return NSBundle.mainBundle().loadNibNamed(className, owner: self, options: nil).first as! UIView
+    @IBOutlet open lazy var contentView: UIView! = {
+        let className = NSStringFromClass(type(of: self)).components(separatedBy: ".").last
+        return Bundle.main.loadNibNamed(className!, owner: self, options: nil)!.first as! UIView
     }()
     
     // MARK: - Lifecycle
@@ -66,7 +66,7 @@ public class AEXibceptionView: UIView {
     */
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clear
         addSubview(contentView)
     }
 

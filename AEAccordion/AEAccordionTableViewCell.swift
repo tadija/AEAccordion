@@ -32,12 +32,12 @@ import UIKit
     You can also override `setExpanded:withCompletion:` in order to animate this UI update.
 */
 
-public class AEAccordionTableViewCell: UITableViewCell {
+open class AEAccordionTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
     /// Flag which tells if the cell is expanded.
-    public private(set) var expanded = false
+    open fileprivate(set) var expanded = false
     
     // MARK: - Actions
     
@@ -47,7 +47,7 @@ public class AEAccordionTableViewCell: UITableViewCell {
         :param: expanded `true` if the cell should be expanded, `false` if it should be collapsed.
         :param: animated If `true` action should be animated.
     */
-    public func setExpanded(expanded: Bool, animated: Bool) {
+    open func setExpanded(_ expanded: Bool, animated: Bool) {
         self.expanded = expanded
     }
 

@@ -14,25 +14,25 @@ class CustomTableViewCell: AEAccordionTableViewCell {
     
     @IBOutlet weak var headerView: HeaderView! {
         didSet {
-            headerView.imageView.tintColor = UIColor.whiteColor()
+            headerView.imageView.tintColor = UIColor.white
         }
     }
     @IBOutlet weak var detailView: DetailView!
     
     // MARK: - Override
     
-    override func setExpanded(expanded: Bool, animated: Bool) {
+    override func setExpanded(_ expanded: Bool, animated: Bool) {
         super.setExpanded(expanded, animated: animated)
         
         if !animated {
             toggleCell()
         } else {
-            let alwaysOptions: UIViewAnimationOptions = [.AllowUserInteraction, .BeginFromCurrentState, .TransitionCrossDissolve]
-            let expandedOptions: UIViewAnimationOptions = [.TransitionFlipFromTop, .CurveEaseOut]
-            let collapsedOptions: UIViewAnimationOptions = [.TransitionFlipFromBottom, .CurveEaseIn]
+            let alwaysOptions: UIViewAnimationOptions = [.allowUserInteraction, .beginFromCurrentState, .transitionCrossDissolve]
+            let expandedOptions: UIViewAnimationOptions = [.transitionFlipFromTop, .curveEaseOut]
+            let collapsedOptions: UIViewAnimationOptions = [.transitionFlipFromBottom, .curveEaseIn]
             let options: UIViewAnimationOptions = expanded ? alwaysOptions.union(expandedOptions) : alwaysOptions.union(collapsedOptions)
             
-            UIView.transitionWithView(detailView, duration: 0.3, options: options, animations: { () -> Void in
+            UIView.transition(with: detailView, duration: 0.3, options: options, animations: { () -> Void in
                 self.toggleCell()
                 }, completion: nil)
         }
@@ -40,9 +40,9 @@ class CustomTableViewCell: AEAccordionTableViewCell {
     
     // MARK: - Helpers
     
-    private func toggleCell() {
-        detailView.hidden = !expanded
-        headerView.imageView.transform = expanded ? CGAffineTransformMakeRotation(CGFloat(M_PI)) : CGAffineTransformIdentity
+    fileprivate func toggleCell() {
+        detailView.isHidden = !expanded
+        headerView.imageView.transform = expanded ? CGAffineTransform(rotationAngle: CGFloat.pi) : CGAffineTransform.identity
     }
     
 }

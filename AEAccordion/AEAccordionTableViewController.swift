@@ -31,12 +31,12 @@ import UIKit
     (based on information in `expandedIndexPaths` property).
 */
 
-public class AEAccordionTableViewController: UITableViewController {
+open class AEAccordionTableViewController: UITableViewController {
     
     // MARK: - Properties
     
     /// Array of `NSIndexPath` objects for all of the expanded cells.
-    public var expandedIndexPaths = [NSIndexPath]()
+    open var expandedIndexPaths = [IndexPath]()
     
     // MARK: - Actions
     
@@ -46,7 +46,7 @@ public class AEAccordionTableViewController: UITableViewController {
         :param: cell Cell that should be expanded or collapsed.
         :param: animated If `true` action should be animated.
     */
-    public func toggleCell(cell: AEAccordionTableViewCell, animated: Bool) {
+    open func toggleCell(_ cell: AEAccordionTableViewCell, animated: Bool) {
         if !cell.expanded {
             expandCell(cell, animated: animated)
         } else {
@@ -65,7 +65,7 @@ public class AEAccordionTableViewController: UITableViewController {
         :param: cell A table-view cell object that tableView is going to use when drawing the row.
         :param: indexPath An index path locating the row in tableView.
     */
-    public override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    open override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? AEAccordionTableViewCell {
             let expanded = expandedIndexPaths.contains(indexPath)
             cell.setExpanded(expanded, animated: false)
@@ -80,16 +80,16 @@ public class AEAccordionTableViewController: UITableViewController {
         :param: tableView A table-view object informing the delegate about the row deselection.
         :param: indexPath An index path locating the deselected row in tableView.
     */
-    public override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let cell = tableView.cellForRowAtIndexPath(indexPath) as? AEAccordionTableViewCell {
+    open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? AEAccordionTableViewCell {
             toggleCell(cell, animated: true)
         }
     }
     
     // MARK: - Helpers
     
-    private func expandCell(cell: AEAccordionTableViewCell, animated: Bool) {
-        if let indexPath = tableView.indexPathForCell(cell) {
+    fileprivate func expandCell(_ cell: AEAccordionTableViewCell, animated: Bool) {
+        if let indexPath = tableView.indexPath(for: cell) {
             if !animated {
                 cell.setExpanded(true, animated: false)
                 addToExpandedIndexPaths(indexPath)
@@ -111,8 +111,8 @@ public class AEAccordionTableViewController: UITableViewController {
         }
     }
     
-    private func collapseCell(cell: AEAccordionTableViewCell, animated: Bool) {
-        if let indexPath = tableView.indexPathForCell(cell) {
+    fileprivate func collapseCell(_ cell: AEAccordionTableViewCell, animated: Bool) {
+        if let indexPath = tableView.indexPath(for: cell) {
             if !animated {
                 cell.setExpanded(false, animated: false)
                 removeFromExpandedIndexPaths(indexPath)
@@ -134,13 +134,13 @@ public class AEAccordionTableViewController: UITableViewController {
         }
     }
     
-    private func addToExpandedIndexPaths(indexPath: NSIndexPath) {
+    fileprivate func addToExpandedIndexPaths(_ indexPath: IndexPath) {
         expandedIndexPaths.append(indexPath)
     }
     
-    private func removeFromExpandedIndexPaths(indexPath: NSIndexPath) {
-        if let index = self.expandedIndexPaths.indexOf(indexPath) {
-            self.expandedIndexPaths.removeAtIndex(index)
+    fileprivate func removeFromExpandedIndexPaths(_ indexPath: IndexPath) {
+        if let index = self.expandedIndexPaths.index(of: indexPath) {
+            self.expandedIndexPaths.remove(at: index)
         }
     }
 

@@ -12,14 +12,14 @@ class SampleTableViewController: AEAccordionTableViewController {
     
     // MARK: - Properties
     
-    private let cellIdentifier = "CustomTableViewCell"
-    private let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    fileprivate let cellIdentifier = "CustomTableViewCell"
+    fileprivate let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as? String
+        title = Bundle.main.infoDictionary!["CFBundleName"] as? String
         registerCell()
         expandFirstCell()
     }
@@ -28,22 +28,22 @@ class SampleTableViewController: AEAccordionTableViewController {
     
     func registerCell() {
         let cellNib = UINib(nibName: cellIdentifier, bundle: nil)
-        tableView.registerNib(cellNib, forCellReuseIdentifier: cellIdentifier)
+        tableView.register(cellNib, forCellReuseIdentifier: cellIdentifier)
     }
     
     func expandFirstCell() {
-        let firstCellIndexPath = NSIndexPath(forRow: 0, inSection: 0)
+        let firstCellIndexPath = IndexPath(row: 0, section: 0)
         expandedIndexPaths.append(firstCellIndexPath)
     }
     
     // MARK: - UITableViewDataSource
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return days.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CustomTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CustomTableViewCell
         
         cell.headerView.dayLabel.text = days[indexPath.row]
         cell.detailView.imageView.image = UIImage(named: "0\(indexPath.row + 1)")
@@ -53,7 +53,7 @@ class SampleTableViewController: AEAccordionTableViewController {
     
     // MARK: - UITableViewDelegate
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return expandedIndexPaths.contains(indexPath) ? 200.0 : 50.0
     }
 
