@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		8B54CF9B1B446BB100F8992A /* AEAccordionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAccordionTableViewCell.swift; sourceTree = "<group>"; };
 		8B54CF9C1B446BB100F8992A /* AEAccordionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAccordionTableViewController.swift; sourceTree = "<group>"; };
-		8B55D0A81B3E331200641110 /* AEAccordion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEAccordion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B55D0A81B3E331200641110 /* AEAccordionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEAccordionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B55D0AB1B3E331200641110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B55D0B21B3E331200641110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B55D0B51B3E331200641110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		8B55D0A91B3E331200641110 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B55D0A81B3E331200641110 /* AEAccordion.app */,
+				8B55D0A81B3E331200641110 /* AEAccordionExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,9 +101,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8B55D0A71B3E331200641110 /* AEAccordion */ = {
+		8B55D0A71B3E331200641110 /* AEAccordionExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8B55D0D01B3E331200641110 /* Build configuration list for PBXNativeTarget "AEAccordion" */;
+			buildConfigurationList = 8B55D0D01B3E331200641110 /* Build configuration list for PBXNativeTarget "AEAccordionExample" */;
 			buildPhases = (
 				8B55D0A41B3E331200641110 /* Sources */,
 				8B55D0A51B3E331200641110 /* Frameworks */,
@@ -113,9 +113,9 @@
 			);
 			dependencies = (
 			);
-			name = AEAccordion;
+			name = AEAccordionExample;
 			productName = AEAccordion;
-			productReference = 8B55D0A81B3E331200641110 /* AEAccordion.app */;
+			productReference = 8B55D0A81B3E331200641110 /* AEAccordionExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,11 +129,12 @@
 				TargetAttributes = {
 					8B55D0A71B3E331200641110 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = VL46Q749LJ;
 						LastSwiftMigration = 0830;
 					};
 				};
 			};
-			buildConfigurationList = 8B55D0A31B3E331200641110 /* Build configuration list for PBXProject "AEAccordion" */;
+			buildConfigurationList = 8B55D0A31B3E331200641110 /* Build configuration list for PBXProject "AEAccordionExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -146,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8B55D0A71B3E331200641110 /* AEAccordion */,
+				8B55D0A71B3E331200641110 /* AEAccordionExample */,
 			);
 		};
 /* End PBXProject section */
@@ -284,9 +285,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VL46Q749LJ;
 				INFOPLIST_FILE = AEAccordionExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEAccordion;
+				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEAccordionExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -296,9 +298,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VL46Q749LJ;
 				INFOPLIST_FILE = AEAccordionExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEAccordion;
+				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEAccordionExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -307,7 +310,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8B55D0A31B3E331200641110 /* Build configuration list for PBXProject "AEAccordion" */ = {
+		8B55D0A31B3E331200641110 /* Build configuration list for PBXProject "AEAccordionExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B55D0CE1B3E331200641110 /* Debug */,
@@ -316,7 +319,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8B55D0D01B3E331200641110 /* Build configuration list for PBXNativeTarget "AEAccordion" */ = {
+		8B55D0D01B3E331200641110 /* Build configuration list for PBXNativeTarget "AEAccordionExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8B55D0D11B3E331200641110 /* Debug */,

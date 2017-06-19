@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  AEAccordion
+//  AEAccordionExample
 //
 //  Created by Marko Tadic on 6/27/15.
 //  Copyright © 2015 AE. All rights reserved.

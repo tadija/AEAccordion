@@ -1,6 +1,6 @@
 //
 //  SampleTableViewCell.swift
-//  AEAccordion
+//  AEAccordionExample
 //
 //  Created by Marko Tadic on 6/26/15.
 //  Copyright © 2015 AE. All rights reserved.
