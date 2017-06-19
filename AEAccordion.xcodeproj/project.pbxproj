@@ -21,6 +21,8 @@
 		8BD101131EF87E3D00C20D72 /* AEAccordion.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AEAccordion.podspec; sourceTree = "<group>"; };
 		8BD101141EF87E3D00C20D72 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8BD101151EF87E3D00C20D72 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8BD101251EF87FFD00C20D72 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		8BD101261EF8802800C20D72 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,7 @@
 		8BD100F91EF87D8900C20D72 = {
 			isa = PBXGroup;
 			children = (
+				8BD101251EF87FFD00C20D72 /* Package.swift */,
 				8BD101051EF87D8900C20D72 /* Sources */,
 				8BD101041EF87D8900C20D72 /* Products */,
 				8BD101161EF87E4000C20D72 /* Supporting Files */,
@@ -75,6 +78,7 @@
 			children = (
 				8BD101141EF87E3D00C20D72 /* LICENSE */,
 				8BD101151EF87E3D00C20D72 /* README.md */,
+				8BD101261EF8802800C20D72 /* CHANGELOG.md */,
 				8BD101131EF87E3D00C20D72 /* AEAccordion.podspec */,
 			);
 			name = "Supporting Files";
