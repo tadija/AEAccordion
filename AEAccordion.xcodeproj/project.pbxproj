@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		8BD101081EF87D8900C20D72 /* AEAccordion.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD101061EF87D8900C20D72 /* AEAccordion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BD101101EF87DD500C20D72 /* AEAccordionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1010E1EF87DD500C20D72 /* AEAccordionTableViewCell.swift */; };
-		8BD101111EF87DD500C20D72 /* AEAccordionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1010F1EF87DD500C20D72 /* AEAccordionTableViewController.swift */; };
+		8BD101101EF87DD500C20D72 /* AccordionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1010E1EF87DD500C20D72 /* AccordionTableViewCell.swift */; };
+		8BD101111EF87DD500C20D72 /* AccordionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1010F1EF87DD500C20D72 /* AccordionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8BD101031EF87D8900C20D72 /* AEAccordion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEAccordion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD101061EF87D8900C20D72 /* AEAccordion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEAccordion.h; sourceTree = "<group>"; };
 		8BD101071EF87D8900C20D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BD1010E1EF87DD500C20D72 /* AEAccordionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAccordionTableViewCell.swift; sourceTree = "<group>"; };
-		8BD1010F1EF87DD500C20D72 /* AEAccordionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAccordionTableViewController.swift; sourceTree = "<group>"; };
+		8BD1010E1EF87DD500C20D72 /* AccordionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccordionTableViewCell.swift; sourceTree = "<group>"; };
+		8BD1010F1EF87DD500C20D72 /* AccordionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccordionTableViewController.swift; sourceTree = "<group>"; };
 		8BD101131EF87E3D00C20D72 /* AEAccordion.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AEAccordion.podspec; sourceTree = "<group>"; };
 		8BD101141EF87E3D00C20D72 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8BD101151EF87E3D00C20D72 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -57,8 +57,8 @@
 		8BD101051EF87D8900C20D72 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8BD1010E1EF87DD500C20D72 /* AEAccordionTableViewCell.swift */,
-				8BD1010F1EF87DD500C20D72 /* AEAccordionTableViewController.swift */,
+				8BD1010E1EF87DD500C20D72 /* AccordionTableViewCell.swift */,
+				8BD1010F1EF87DD500C20D72 /* AccordionTableViewController.swift */,
 				8BD101121EF87DD900C20D72 /* Supporting Files */,
 			);
 			path = Sources;
@@ -165,8 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BD101111EF87DD500C20D72 /* AEAccordionTableViewController.swift in Sources */,
-				8BD101101EF87DD500C20D72 /* AEAccordionTableViewCell.swift in Sources */,
+				8BD101111EF87DD500C20D72 /* AccordionTableViewController.swift in Sources */,
+				8BD101101EF87DD500C20D72 /* AccordionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

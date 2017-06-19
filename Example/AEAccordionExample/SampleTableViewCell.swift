@@ -8,7 +8,7 @@
 
 import AEAccordion
 
-class SampleTableViewCell: AEAccordionTableViewCell {
+class SampleTableViewCell: AccordionTableViewCell {
     
     static let reuseIdentifier = "SampleTableViewCell"
     

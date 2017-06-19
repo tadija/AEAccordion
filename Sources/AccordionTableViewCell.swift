@@ -1,13 +1,13 @@
 import UIKit
 
 /**
-    This class is used as a expandable `UITableViewCell` for `AEAccordionTableViewController`.
+    This class is used as a expandable `UITableViewCell` for `AccordionTableViewController`.
 
     Just subclass it and override setter of the `expanded` property to update UI based on this property.
 
     You can also override `setExpanded:animated:` in order to animate this UI update.
 */
-open class AEAccordionTableViewCell: UITableViewCell {
+open class AccordionTableViewCell: UITableViewCell {
     
     // MARK: Properties
     
