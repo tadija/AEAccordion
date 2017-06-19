@@ -9,7 +9,8 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 
-> Simple and lightweight solution for making accordion effect in table view controller. Show detailed content on demand.
+> Simple and lightweight solution for making accordion effect in table view controller.  
+> Show detailed content on demand.
 
 ![AEAccordion](http://tadija.net/public/AEAccordion.gif)
 
