@@ -8,7 +8,7 @@
 
 import AEAccordion
 
-class SampleTableViewController: AccordionTableViewController {
+final class SampleTableViewController: AccordionTableViewController {
     
     // MARK: Properties
 

@@ -8,7 +8,7 @@
 
 import AEAccordion
 
-class SampleTableViewCell: AccordionTableViewCell {
+final class SampleTableViewCell: AccordionTableViewCell {
     
     static let reuseIdentifier = "SampleTableViewCell"
     
@@ -30,9 +30,7 @@ class SampleTableViewCell: AccordionTableViewCell {
     override func setExpanded(_ expanded: Bool, animated: Bool) {
         super.setExpanded(expanded, animated: animated)
         
-        if !animated {
-            toggleCell()
-        } else {
+        if animated {
             let alwaysOptions: UIViewAnimationOptions = [.allowUserInteraction,
                                                          .beginFromCurrentState,
                                                          .transitionCrossDissolve]
@@ -40,15 +38,17 @@ class SampleTableViewCell: AccordionTableViewCell {
             let collapsedOptions: UIViewAnimationOptions = [.transitionFlipFromBottom, .curveEaseIn]
             let options = expanded ? alwaysOptions.union(expandedOptions) : alwaysOptions.union(collapsedOptions)
             
-            UIView.transition(with: detailView, duration: 0.3, options: options, animations: { () -> Void in
+            UIView.transition(with: detailView, duration: 0.3, options: options, animations: {
                 self.toggleCell()
             }, completion: nil)
+        } else {
+            toggleCell()
         }
     }
     
     // MARK: Helpers
     
-    fileprivate func toggleCell() {
+    private func toggleCell() {
         detailView.isHidden = !expanded
         arrow.transform = expanded ? CGAffineTransform(rotationAngle: CGFloat.pi) : .identity
     }
