@@ -29,23 +29,22 @@ import UIKit
 
     Just subclass it and override setter of the `expanded` property to update UI based on this property.
 
-    You can also override `setExpanded:withCompletion:` in order to animate this UI update.
+    You can also override `setExpanded:animated:` in order to animate this UI update.
 */
-
 open class AEAccordionTableViewCell: UITableViewCell {
     
-    // MARK: - Properties
+    // MARK: Properties
     
     /// Flag which tells if the cell is expanded.
-    open fileprivate(set) var expanded = false
+    open private(set) var expanded = false
     
-    // MARK: - Actions
+    // MARK: Actions
     
     /**
         Public setter of the `expanded` property (this should be overriden by a subclass for custom UI update)
     
-        :param: expanded `true` if the cell should be expanded, `false` if it should be collapsed.
-        :param: animated If `true` action should be animated.
+        - parameter expanded: `true` if the cell should be expanded, `false` if it should be collapsed.
+        - parameter animated: If `true` action should be animated.
     */
     open func setExpanded(_ expanded: Bool, animated: Bool) {
         self.expanded = expanded

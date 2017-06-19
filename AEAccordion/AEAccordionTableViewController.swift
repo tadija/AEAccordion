@@ -30,75 +30,71 @@ import UIKit
     Just subclass it and implement `tableView:heightForRowAtIndexPath:`
     (based on information in `expandedIndexPaths` property).
 */
-
 open class AEAccordionTableViewController: UITableViewController {
     
-    // MARK: - Properties
+    // MARK: Properties
     
-    /// Array of `NSIndexPath` objects for all of the expanded cells.
+    /// Array of `IndexPath` objects for all of the expanded cells.
     open var expandedIndexPaths = [IndexPath]()
     
-    // MARK: - Actions
+    /// Flag that indicates if cell toggle should be animated. Defaults to `true`.
+    open var shouldAnimateCellToggle = true
+    
+    /// Flag that indicates if `tableView` should scroll after cell is expanded, 
+    /// in order to make it completely visible (if it's not already). Defaults to `true`.
+    open var shouldScrollIfNeededAfterCellExpand = true
+    
+    // MARK: Actions
     
     /**
         Expand or collapse the cell.
     
-        :param: cell Cell that should be expanded or collapsed.
-        :param: animated If `true` action should be animated.
+        - parameter cell: Cell that should be expanded or collapsed.
+        - parameter animated: If `true` action should be animated.
     */
     open func toggleCell(_ cell: AEAccordionTableViewCell, animated: Bool) {
-        if !cell.expanded {
-            expandCell(cell, animated: animated)
-        } else {
+        if cell.expanded {
             collapseCell(cell, animated: animated)
+        } else {
+            expandCell(cell, animated: animated)
         }
     }
     
-    // MARK: - UITableViewDelegate
+    // MARK: UITableViewDelegate
     
-    /**
-        `AEAccordionTableViewController` will set cell to be expanded or collapsed without animation.
-    
-        Tells the delegate the table view is about to draw a cell for a particular row.
-    
-        :param: tableView The table-view object informing the delegate of this impending event.
-        :param: cell A table-view cell object that tableView is going to use when drawing the row.
-        :param: indexPath An index path locating the row in tableView.
-    */
-    open override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    /// `AEAccordionTableViewController` will set cell to be expanded or collapsed without animation.
+    open override func tableView(_ tableView: UITableView,
+                                 willDisplay cell: UITableViewCell,
+                                 forRowAt indexPath: IndexPath) {
         if let cell = cell as? AEAccordionTableViewCell {
             let expanded = expandedIndexPaths.contains(indexPath)
             cell.setExpanded(expanded, animated: false)
         }
     }
     
-    /**
-        `AEAccordionTableViewController` will animate cell to be expanded or collapsed.
-        
-        Tells the delegate that the specified row is now deselected.
-        
-        :param: tableView A table-view object informing the delegate about the row deselection.
-        :param: indexPath An index path locating the deselected row in tableView.
-    */
+    /// `AEAccordionTableViewController` will animate cell to be expanded or collapsed.
     open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? AEAccordionTableViewCell {
-            toggleCell(cell, animated: true)
+            toggleCell(cell, animated: shouldAnimateCellToggle)
         }
     }
     
-    // MARK: - Helpers
+    // MARK: Helpers
     
-    fileprivate func expandCell(_ cell: AEAccordionTableViewCell, animated: Bool) {
+    private func expandCell(_ cell: AEAccordionTableViewCell, animated: Bool) {
         if let indexPath = tableView.indexPath(for: cell) {
             if !animated {
                 cell.setExpanded(true, animated: false)
                 addToExpandedIndexPaths(indexPath)
+                tableView.reloadData()
+                scrollIfNeededAfterExpandingCell(at: indexPath)
             } else {
                 CATransaction.begin()
                 
                 CATransaction.setCompletionBlock({ () -> Void in
                     // 2. animate views after expanding
                     cell.setExpanded(true, animated: true)
+                    self.scrollIfNeededAfterExpandingCell(at: indexPath)
                 })
                 
                 // 1. expand cell height
@@ -111,11 +107,12 @@ open class AEAccordionTableViewController: UITableViewController {
         }
     }
     
-    fileprivate func collapseCell(_ cell: AEAccordionTableViewCell, animated: Bool) {
+    private func collapseCell(_ cell: AEAccordionTableViewCell, animated: Bool) {
         if let indexPath = tableView.indexPath(for: cell) {
             if !animated {
                 cell.setExpanded(false, animated: false)
                 removeFromExpandedIndexPaths(indexPath)
+                tableView.reloadData()
             } else {
                 CATransaction.begin()
                 
@@ -134,13 +131,25 @@ open class AEAccordionTableViewController: UITableViewController {
         }
     }
     
-    fileprivate func addToExpandedIndexPaths(_ indexPath: IndexPath) {
+    private func addToExpandedIndexPaths(_ indexPath: IndexPath) {
         expandedIndexPaths.append(indexPath)
     }
     
-    fileprivate func removeFromExpandedIndexPaths(_ indexPath: IndexPath) {
-        if let index = self.expandedIndexPaths.index(of: indexPath) {
-            self.expandedIndexPaths.remove(at: index)
+    private func removeFromExpandedIndexPaths(_ indexPath: IndexPath) {
+        if let index = expandedIndexPaths.index(of: indexPath) {
+            expandedIndexPaths.remove(at: index)
+        }
+    }
+    
+    private func scrollIfNeededAfterExpandingCell(at indexPath: IndexPath) {
+        guard shouldScrollIfNeededAfterCellExpand,
+            let cell = tableView.cellForRow(at: indexPath) as? AEAccordionTableViewCell else {
+            return
+        }
+        let cellRect = tableView.rectForRow(at: indexPath)
+        let isCompletelyVisible = tableView.bounds.contains(cellRect)
+        if cell.expanded && !isCompletelyVisible {
+            tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
     }
 
