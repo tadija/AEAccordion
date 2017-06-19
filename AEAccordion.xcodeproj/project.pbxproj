@@ -13,8 +13,6 @@
 		8B55D0AC1B3E331200641110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0AB1B3E331200641110 /* AppDelegate.swift */; };
 		8B55D0B31B3E331200641110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0B21B3E331200641110 /* Assets.xcassets */; };
 		8B55D0B61B3E331200641110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0B41B3E331200641110 /* LaunchScreen.storyboard */; };
-		8B55D0C11B3E331200641110 /* AEAccordionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0C01B3E331200641110 /* AEAccordionTests.swift */; };
-		8B55D0CC1B3E331200641110 /* AEAccordionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0CB1B3E331200641110 /* AEAccordionUITests.swift */; };
 		8B55D0E71B3E33A400641110 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0E01B3E33A400641110 /* HeaderView.swift */; };
 		8B55D0E81B3E33A400641110 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0E11B3E33A400641110 /* HeaderView.xib */; };
 		8B55D0E91B3E33A400641110 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0E21B3E33A400641110 /* DetailView.swift */; };
@@ -25,23 +23,6 @@
 		8B55D0F01B3E33BF00641110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0EF1B3E33BF00641110 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8B55D0BD1B3E331200641110 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B55D0A01B3E331200641110 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B55D0A71B3E331200641110;
-			remoteInfo = AEAccordion;
-		};
-		8B55D0C81B3E331200641110 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B55D0A01B3E331200641110 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B55D0A71B3E331200641110;
-			remoteInfo = AEAccordion;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		8B54CF9B1B446BB100F8992A /* AEAccordionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAccordionTableViewCell.swift; sourceTree = "<group>"; };
 		8B54CF9C1B446BB100F8992A /* AEAccordionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAccordionTableViewController.swift; sourceTree = "<group>"; };
@@ -51,12 +32,6 @@
 		8B55D0B21B3E331200641110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B55D0B51B3E331200641110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B55D0B71B3E331200641110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B55D0BC1B3E331200641110 /* AEAccordionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AEAccordionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B55D0C01B3E331200641110 /* AEAccordionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEAccordionTests.swift; sourceTree = "<group>"; };
-		8B55D0C21B3E331200641110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B55D0C71B3E331200641110 /* AEAccordionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AEAccordionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B55D0CB1B3E331200641110 /* AEAccordionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AEAccordionUITests.swift; sourceTree = "<group>"; };
-		8B55D0CD1B3E331200641110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B55D0E01B3E33A400641110 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8B55D0E11B3E33A400641110 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		8B55D0E21B3E33A400641110 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -73,20 +48,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		8B55D0A51B3E331200641110 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B55D0B91B3E331200641110 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B55D0C41B3E331200641110 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -119,8 +80,6 @@
 				8B54CF9A1B446BB100F8992A /* AEAccordion */,
 				8B54CF9F1B446BC100F8992A /* AEXibceptionView */,
 				8B55D0AA1B3E331200641110 /* AEAccordionExample */,
-				8B55D0BF1B3E331200641110 /* AEAccordionTests */,
-				8B55D0CA1B3E331200641110 /* AEAccordionUITests */,
 				8B55D0A91B3E331200641110 /* Products */,
 				8B55D0F11B3E37C100641110 /* LICENSE */,
 				8B55D0F21B3E37C100641110 /* README.md */,
@@ -133,8 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				8B55D0A81B3E331200641110 /* AEAccordion.app */,
-				8B55D0BC1B3E331200641110 /* AEAccordionTests.xctest */,
-				8B55D0C71B3E331200641110 /* AEAccordionUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,24 +111,6 @@
 				8B55D0D91B3E333E00641110 /* Supporting Files */,
 			);
 			path = AEAccordionExample;
-			sourceTree = "<group>";
-		};
-		8B55D0BF1B3E331200641110 /* AEAccordionTests */ = {
-			isa = PBXGroup;
-			children = (
-				8B55D0C01B3E331200641110 /* AEAccordionTests.swift */,
-				8B55D0C21B3E331200641110 /* Info.plist */,
-			);
-			path = AEAccordionTests;
-			sourceTree = "<group>";
-		};
-		8B55D0CA1B3E331200641110 /* AEAccordionUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8B55D0CB1B3E331200641110 /* AEAccordionUITests.swift */,
-				8B55D0CD1B3E331200641110 /* Info.plist */,
-			);
-			path = AEAccordionUITests;
 			sourceTree = "<group>";
 		};
 		8B55D0D91B3E333E00641110 /* Supporting Files */ = {
@@ -204,42 +143,6 @@
 			productReference = 8B55D0A81B3E331200641110 /* AEAccordion.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8B55D0BB1B3E331200641110 /* AEAccordionTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8B55D0D31B3E331200641110 /* Build configuration list for PBXNativeTarget "AEAccordionTests" */;
-			buildPhases = (
-				8B55D0B81B3E331200641110 /* Sources */,
-				8B55D0B91B3E331200641110 /* Frameworks */,
-				8B55D0BA1B3E331200641110 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8B55D0BE1B3E331200641110 /* PBXTargetDependency */,
-			);
-			name = AEAccordionTests;
-			productName = AEAccordionTests;
-			productReference = 8B55D0BC1B3E331200641110 /* AEAccordionTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		8B55D0C61B3E331200641110 /* AEAccordionUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8B55D0D61B3E331200641110 /* Build configuration list for PBXNativeTarget "AEAccordionUITests" */;
-			buildPhases = (
-				8B55D0C31B3E331200641110 /* Sources */,
-				8B55D0C41B3E331200641110 /* Frameworks */,
-				8B55D0C51B3E331200641110 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8B55D0C91B3E331200641110 /* PBXTargetDependency */,
-			);
-			name = AEAccordionUITests;
-			productName = AEAccordionUITests;
-			productReference = 8B55D0C71B3E331200641110 /* AEAccordionUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -252,16 +155,6 @@
 					8B55D0A71B3E331200641110 = {
 						CreatedOnToolsVersion = 7.0;
 						LastSwiftMigration = 0830;
-					};
-					8B55D0BB1B3E331200641110 = {
-						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0830;
-						TestTargetID = 8B55D0A71B3E331200641110;
-					};
-					8B55D0C61B3E331200641110 = {
-						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0830;
-						TestTargetID = 8B55D0A71B3E331200641110;
 					};
 				};
 			};
@@ -279,8 +172,6 @@
 			projectRoot = "";
 			targets = (
 				8B55D0A71B3E331200641110 /* AEAccordion */,
-				8B55D0BB1B3E331200641110 /* AEAccordionTests */,
-				8B55D0C61B3E331200641110 /* AEAccordionUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,20 +187,6 @@
 				8B55D0EC1B3E33A400641110 /* CustomTableViewCell.xib in Resources */,
 				8B55D0E81B3E33A400641110 /* HeaderView.xib in Resources */,
 				8B55D0EA1B3E33A400641110 /* DetailView.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B55D0BA1B3E331200641110 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B55D0C51B3E331200641110 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,36 +208,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B55D0B81B3E331200641110 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B55D0C11B3E331200641110 /* AEAccordionTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B55D0C31B3E331200641110 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B55D0CC1B3E331200641110 /* AEAccordionUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8B55D0BE1B3E331200641110 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8B55D0A71B3E331200641110 /* AEAccordion */;
-			targetProxy = 8B55D0BD1B3E331200641110 /* PBXContainerItemProxy */;
-		};
-		8B55D0C91B3E331200641110 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8B55D0A71B3E331200641110 /* AEAccordion */;
-			targetProxy = 8B55D0C81B3E331200641110 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8B55D0B41B3E331200641110 /* LaunchScreen.storyboard */ = {
@@ -486,58 +334,6 @@
 			};
 			name = Release;
 		};
-		8B55D0D41B3E331200641110 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = AEAccordionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEAccordionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AEAccordion.app/AEAccordion";
-			};
-			name = Debug;
-		};
-		8B55D0D51B3E331200641110 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = AEAccordionTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEAccordionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AEAccordion.app/AEAccordion";
-			};
-			name = Release;
-		};
-		8B55D0D71B3E331200641110 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = AEAccordionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEAccordionUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = AEAccordion;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		8B55D0D81B3E331200641110 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = AEAccordionUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEAccordionUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = AEAccordion;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -555,24 +351,6 @@
 			buildConfigurations = (
 				8B55D0D11B3E331200641110 /* Debug */,
 				8B55D0D21B3E331200641110 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8B55D0D31B3E331200641110 /* Build configuration list for PBXNativeTarget "AEAccordionTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B55D0D41B3E331200641110 /* Debug */,
-				8B55D0D51B3E331200641110 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8B55D0D61B3E331200641110 /* Build configuration list for PBXNativeTarget "AEAccordionUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B55D0D71B3E331200641110 /* Debug */,
-				8B55D0D81B3E331200641110 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
