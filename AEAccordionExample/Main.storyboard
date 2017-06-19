@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--AEXibceptionAccordion-->
+        <!--AEAccordion-->
         <scene sceneID="WkD-Af-r4U">
             <objects>
                 <tableViewController id="qps-RY-gML" customClass="SampleTableViewController" customModule="AEAccordion" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                             <outlet property="delegate" destination="qps-RY-gML" id="2Wn-7B-Kzf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="AEXibceptionAccordion" id="Atm-xk-VY4"/>
+                    <navigationItem key="navigationItem" title="AEAccordion" id="Atm-xk-VY4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dAF-MV-hVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

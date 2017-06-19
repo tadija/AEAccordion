@@ -10,16 +10,22 @@ import UIKit
 
 class CustomTableViewCell: AEAccordionTableViewCell {
     
-    // MARK: - Outlets
+    static let reuseIdentifier = "CustomTableViewCell"
     
-    @IBOutlet weak var headerView: HeaderView! {
+    // MARK: Outlets
+    
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var day: UILabel!
+    @IBOutlet weak var arrow: UIImageView! {
         didSet {
-            headerView.imageView.tintColor = UIColor.white
+            arrow.tintColor = UIColor.white
         }
     }
-    @IBOutlet weak var detailView: DetailView!
     
-    // MARK: - Override
+    @IBOutlet weak var detailView: UIView!
+    @IBOutlet weak var weatherIcon: UIImageView!
+    
+    // MARK: Override
     
     override func setExpanded(_ expanded: Bool, animated: Bool) {
         super.setExpanded(expanded, animated: animated)
@@ -34,15 +40,15 @@ class CustomTableViewCell: AEAccordionTableViewCell {
             
             UIView.transition(with: detailView, duration: 0.3, options: options, animations: { () -> Void in
                 self.toggleCell()
-                }, completion: nil)
+            }, completion: nil)
         }
     }
     
-    // MARK: - Helpers
+    // MARK: Helpers
     
     fileprivate func toggleCell() {
         detailView.isHidden = !expanded
-        headerView.imageView.transform = expanded ? CGAffineTransform(rotationAngle: CGFloat.pi) : CGAffineTransform.identity
+        arrow.transform = expanded ? CGAffineTransform(rotationAngle: CGFloat.pi) : CGAffineTransform.identity
     }
     
 }
