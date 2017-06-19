@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B54CF9D1B446BB100F8992A /* AEAccordionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54CF9B1B446BB100F8992A /* AEAccordionTableViewCell.swift */; };
-		8B54CF9E1B446BB100F8992A /* AEAccordionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B54CF9C1B446BB100F8992A /* AEAccordionTableViewController.swift */; };
 		8B55D0AC1B3E331200641110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0AB1B3E331200641110 /* AppDelegate.swift */; };
 		8B55D0B31B3E331200641110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0B21B3E331200641110 /* Assets.xcassets */; };
 		8B55D0B61B3E331200641110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0B41B3E331200641110 /* LaunchScreen.storyboard */; };
@@ -16,11 +14,42 @@
 		8B55D0EC1B3E33A400641110 /* SampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0E51B3E33A400641110 /* SampleTableViewCell.xib */; };
 		8B55D0ED1B3E33A400641110 /* SampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55D0E61B3E33A400641110 /* SampleTableViewController.swift */; };
 		8B55D0F01B3E33BF00641110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B55D0EF1B3E33BF00641110 /* Main.storyboard */; };
+		8BD1011E1EF87EDB00C20D72 /* AEAccordion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD1011D1EF87ED000C20D72 /* AEAccordion.framework */; };
+		8BD1011F1EF87EDB00C20D72 /* AEAccordion.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD1011D1EF87ED000C20D72 /* AEAccordion.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8BD1011C1EF87ED000C20D72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BD101181EF87ED000C20D72 /* AEAccordion.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8BD101031EF87D8900C20D72;
+			remoteInfo = AEAccordion;
+		};
+		8BD101201EF87EDB00C20D72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BD101181EF87ED000C20D72 /* AEAccordion.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8BD101021EF87D8900C20D72;
+			remoteInfo = AEAccordion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8BD101221EF87EDB00C20D72 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8BD1011F1EF87EDB00C20D72 /* AEAccordion.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		8B54CF9B1B446BB100F8992A /* AEAccordionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAccordionTableViewCell.swift; sourceTree = "<group>"; };
-		8B54CF9C1B446BB100F8992A /* AEAccordionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEAccordionTableViewController.swift; sourceTree = "<group>"; };
 		8B55D0A81B3E331200641110 /* AEAccordionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEAccordionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B55D0AB1B3E331200641110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B55D0B21B3E331200641110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,9 +59,7 @@
 		8B55D0E51B3E33A400641110 /* SampleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleTableViewCell.xib; sourceTree = "<group>"; };
 		8B55D0E61B3E33A400641110 /* SampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewController.swift; sourceTree = "<group>"; };
 		8B55D0EF1B3E33BF00641110 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		8B55D0F11B3E37C100641110 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		8B55D0F21B3E37C100641110 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		8BF6C12F1B56F6AE00C25979 /* AEAccordion.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AEAccordion.podspec; sourceTree = "<group>"; };
+		8BD101181EF87ED000C20D72 /* AEAccordion.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AEAccordion.xcodeproj; path = ../AEAccordion.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,30 +67,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BD1011E1EF87EDB00C20D72 /* AEAccordion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8B54CF9A1B446BB100F8992A /* AEAccordion */ = {
-			isa = PBXGroup;
-			children = (
-				8B54CF9B1B446BB100F8992A /* AEAccordionTableViewCell.swift */,
-				8B54CF9C1B446BB100F8992A /* AEAccordionTableViewController.swift */,
-			);
-			path = AEAccordion;
-			sourceTree = "<group>";
-		};
 		8B55D09F1B3E331200641110 = {
 			isa = PBXGroup;
 			children = (
-				8B54CF9A1B446BB100F8992A /* AEAccordion */,
+				8BD101181EF87ED000C20D72 /* AEAccordion.xcodeproj */,
 				8B55D0AA1B3E331200641110 /* AEAccordionExample */,
 				8B55D0A91B3E331200641110 /* Products */,
-				8B55D0F11B3E37C100641110 /* LICENSE */,
-				8B55D0F21B3E37C100641110 /* README.md */,
-				8BF6C12F1B56F6AE00C25979 /* AEAccordion.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +114,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8BD101191EF87ED000C20D72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BD1011D1EF87ED000C20D72 /* AEAccordion.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -108,10 +132,12 @@
 				8B55D0A41B3E331200641110 /* Sources */,
 				8B55D0A51B3E331200641110 /* Frameworks */,
 				8B55D0A61B3E331200641110 /* Resources */,
+				8BD101221EF87EDB00C20D72 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8BD101211EF87EDB00C20D72 /* PBXTargetDependency */,
 			);
 			name = AEAccordionExample;
 			productName = AEAccordion;
@@ -145,12 +171,28 @@
 			mainGroup = 8B55D09F1B3E331200641110;
 			productRefGroup = 8B55D0A91B3E331200641110 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8BD101191EF87ED000C20D72 /* Products */;
+					ProjectRef = 8BD101181EF87ED000C20D72 /* AEAccordion.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8B55D0A71B3E331200641110 /* AEAccordionExample */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8BD1011D1EF87ED000C20D72 /* AEAccordion.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AEAccordion.framework;
+			remoteRef = 8BD1011C1EF87ED000C20D72 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8B55D0A61B3E331200641110 /* Resources */ = {
@@ -171,15 +213,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B54CF9D1B446BB100F8992A /* AEAccordionTableViewCell.swift in Sources */,
 				8B55D0ED1B3E33A400641110 /* SampleTableViewController.swift in Sources */,
 				8B55D0EB1B3E33A400641110 /* SampleTableViewCell.swift in Sources */,
 				8B55D0AC1B3E331200641110 /* AppDelegate.swift in Sources */,
-				8B54CF9E1B446BB100F8992A /* AEAccordionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8BD101211EF87EDB00C20D72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AEAccordion;
+			targetProxy = 8BD101201EF87EDB00C20D72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8B55D0B41B3E331200641110 /* LaunchScreen.storyboard */ = {
@@ -284,6 +332,7 @@
 		8B55D0D11B3E331200641110 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VL46Q749LJ;
 				INFOPLIST_FILE = AEAccordionExample/Info.plist;
@@ -297,6 +346,7 @@
 		8B55D0D21B3E331200641110 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VL46Q749LJ;
 				INFOPLIST_FILE = AEAccordionExample/Info.plist;

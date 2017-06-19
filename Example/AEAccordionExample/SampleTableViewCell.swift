@@ -6,7 +6,7 @@
 //  Copyright © 2015 AE. All rights reserved.
 //
 
-import UIKit
+import AEAccordion
 
 class SampleTableViewCell: AEAccordionTableViewCell {
     
