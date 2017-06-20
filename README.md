@@ -1,8 +1,9 @@
 # AEAccordion
+
 **UITableViewController with accordion effect (expand / collapse cells)**
 
 [![Language Swift 3.0](https://img.shields.io/badge/Language-Swift%203.0-orange.svg?style=flat)](https://swift.org)
-[![Platforms iOS | watchOS | tvOS | OSX](https://img.shields.io/badge/Platforms-iOS%20%7C%20watchOS%20%7C%20tvOS%20%7C%20OS%20X-lightgray.svg?style=flat)](http://www.apple.com)
+[![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](http://www.apple.com)
 [![License MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](LICENSE)
 
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/AEAccordion.svg?style=flat)](https://cocoapods.org/pods/AEAccordion)
