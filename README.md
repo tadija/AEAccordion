@@ -1,7 +1,7 @@
 # AEAccordion
 **UITableViewController with accordion effect (expand / collapse cells)**
 
-[![Language Swift 3.0](https://img.shields.io/badge/Language-Swift%203.0-orange.svg?style=flat)](https://swift.org)
+[![Language Swift 4.0](https://img.shields.io/badge/Language-Swift%204.0-orange.svg?style=flat)](https://swift.org)
 [![Platforms iOS | watchOS | tvOS | OSX](https://img.shields.io/badge/Platforms-iOS%20%7C%20watchOS%20%7C%20tvOS%20%7C%20OS%20X-lightgray.svg?style=flat)](http://www.apple.com)
 [![License MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](LICENSE)
 
@@ -88,7 +88,7 @@ final class ReadmeTableViewController: AccordionTableViewController {
 - [Swift Package Manager](https://swift.org/package-manager/):
 
 	```
-	.Package(url: "https://github.com/tadija/AEAccordion.git", majorVersion: 0)
+	.Package(url: "https://github.com/tadija/AEAccordion.git", majorVersion: 2)
 	```
 
 - [Carthage](https://github.com/Carthage/Carthage):
