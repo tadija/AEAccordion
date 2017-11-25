@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 2.0.1
+- Migrated to Swift 4 and Xcode 9.1
+
 ## Version 2.0.0
 
 - Updated code for Swift 3
