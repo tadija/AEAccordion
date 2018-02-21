@@ -1,3 +1,9 @@
+/**
+ *  https://github.com/tadija/AEAccordion
+ *  Copyright (c) Marko Tadić 2015-2018
+ *  Licensed under the MIT license. See LICENSE file.
+ */
+
 import UIKit
 
 /**
@@ -14,11 +20,17 @@ open class AccordionTableViewController: UITableViewController {
     open var expandedIndexPaths = [IndexPath]()
     
     /// Flag that indicates if cell toggle should be animated. Defaults to `true`.
-    open var shouldAnimateCellToggle = true
+    open var isToggleAnimated = true
     
     /// Flag that indicates if `tableView` should scroll after cell is expanded, 
     /// in order to make it completely visible (if it's not already). Defaults to `true`.
     open var shouldScrollIfNeededAfterCellExpand = true
+    
+    /// Closure that will be called after any cell expand is completed.
+    open var expandCompletionHandler: () -> Void = {}
+    
+    /// Closure that will be called after any cell collapse is completed.
+    open var collapseCompletionHandler: () -> Void = {}
     
     // MARK: Actions
     
@@ -51,7 +63,7 @@ open class AccordionTableViewController: UITableViewController {
     /// `AccordionTableViewController` will animate cell to be expanded or collapsed.
     open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? AccordionTableViewCell {
-            toggleCell(cell, animated: shouldAnimateCellToggle)
+            toggleCell(cell, animated: isToggleAnimated)
         }
     }
     
@@ -60,22 +72,22 @@ open class AccordionTableViewController: UITableViewController {
     private func expandCell(_ cell: AccordionTableViewCell, animated: Bool) {
         if let indexPath = tableView.indexPath(for: cell) {
             if !animated {
-                cell.setExpanded(true, animated: false)
                 addToExpandedIndexPaths(indexPath)
+                cell.setExpanded(true, animated: false)
                 tableView.reloadData()
                 scrollIfNeededAfterExpandingCell(at: indexPath)
+                expandCompletionHandler()
             } else {
                 CATransaction.begin()
                 
-                CATransaction.setCompletionBlock({ () -> Void in
-                    // 2. animate views after expanding
-                    cell.setExpanded(true, animated: true)
-                    self.scrollIfNeededAfterExpandingCell(at: indexPath)
-                })
+                CATransaction.setCompletionBlock { [weak self] in
+                    self?.scrollIfNeededAfterExpandingCell(at: indexPath)
+                    self?.expandCompletionHandler()
+                }
                 
-                // 1. expand cell height
                 tableView.beginUpdates()
                 addToExpandedIndexPaths(indexPath)
+                cell.setExpanded(true, animated: true)
                 tableView.endUpdates()
                 
                 CATransaction.commit()
@@ -89,18 +101,18 @@ open class AccordionTableViewController: UITableViewController {
                 cell.setExpanded(false, animated: false)
                 removeFromExpandedIndexPaths(indexPath)
                 tableView.reloadData()
+                collapseCompletionHandler()
             } else {
                 CATransaction.begin()
                 
-                CATransaction.setCompletionBlock({ () -> Void in
-                    // 2. collapse cell height
-                    self.tableView.beginUpdates()
-                    self.removeFromExpandedIndexPaths(indexPath)
-                    self.tableView.endUpdates()
-                })
+                CATransaction.setCompletionBlock { [weak self] in
+                    self?.collapseCompletionHandler()
+                }
                 
-                // 1. animate views before collapsing
+                tableView.beginUpdates()
                 cell.setExpanded(false, animated: true)
+                removeFromExpandedIndexPaths(indexPath)
+                tableView.endUpdates()
                 
                 CATransaction.commit()
             }
