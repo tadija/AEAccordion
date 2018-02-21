@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 2.1.0
+- Added completion handlers after expanding or collapsing cell.
+
 ## Version 2.0.1
 - Migrated to Swift 4 and Xcode 9.1
 
