@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
 
 s.name = 'AEAccordion'
-s.version = '2.1.0'
+s.version = '2.1.1'
 s.license = { :type => 'MIT', :file => 'LICENSE' }
 s.summary = 'UITableViewController with accordion effect (expand / collapse cells)'
 
 s.source = { :git => 'https://github.com/tadija/AEAccordion.git', :tag => s.version }
-s.source_files = 'Sources/*.swift'
+s.source_files = 'Sources/AEAccordion/*.swift'
 
 s.swift_version = '4.2'
 
