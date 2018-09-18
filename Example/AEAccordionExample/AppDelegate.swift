@@ -1,10 +1,8 @@
-//
-//  AppDelegate.swift
-//  AEAccordionExample
-//
-//  Created by Marko Tadic on 6/27/15.
-//  Copyright © 2015 AE. All rights reserved.
-//
+/**
+ *  https://github.com/tadija/AEAccordion
+ *  Copyright (c) Marko Tadić 2015-2018
+ *  Licensed under the MIT license. See LICENSE file.
+ */
 
 import UIKit
 
