@@ -1,10 +1,8 @@
-//
-//  SampleTableViewCell.swift
-//  AEAccordionExample
-//
-//  Created by Marko Tadic on 6/26/15.
-//  Copyright © 2015 AE. All rights reserved.
-//
+/**
+ *  https://github.com/tadija/AEAccordion
+ *  Copyright (c) Marko Tadić 2015-2018
+ *  Licensed under the MIT license. See LICENSE file.
+ */
 
 import AEAccordion
 
@@ -31,11 +29,11 @@ final class SampleTableViewCell: AccordionTableViewCell {
         super.setExpanded(expanded, animated: animated)
         
         if animated {
-            let alwaysOptions: UIViewAnimationOptions = [.allowUserInteraction,
+            let alwaysOptions: UIView.AnimationOptions = [.allowUserInteraction,
                                                          .beginFromCurrentState,
                                                          .transitionCrossDissolve]
-            let expandedOptions: UIViewAnimationOptions = [.transitionFlipFromTop, .curveEaseOut]
-            let collapsedOptions: UIViewAnimationOptions = [.transitionFlipFromBottom, .curveEaseIn]
+            let expandedOptions: UIView.AnimationOptions = [.transitionFlipFromTop, .curveEaseOut]
+            let collapsedOptions: UIView.AnimationOptions = [.transitionFlipFromBottom, .curveEaseIn]
             let options = expanded ? alwaysOptions.union(expandedOptions) : alwaysOptions.union(collapsedOptions)
             
             UIView.transition(with: detailView, duration: 0.3, options: options, animations: {

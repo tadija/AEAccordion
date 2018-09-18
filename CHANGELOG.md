@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 2.1.1
+
+- Bumped Swift language version to 4.2 with Xcode 10 (10A255)
+- Reorganizing project directories and files
+
 ## Version 2.1.0
 - Added completion handlers after expanding or collapsing cell.
 

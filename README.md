@@ -1,17 +1,14 @@
-# AEAccordion
-
-**UITableViewController with accordion effect (expand / collapse cells)**
-
-[![Language Swift 4.0](https://img.shields.io/badge/Language-Swift%204.0-orange.svg?style=flat)](https://swift.org)
-[![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](http://www.apple.com)
+[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://swift.org)
+[![Platforms iOS](https://img.shields.io/badge/Platforms-iOS%20-lightgray.svg?style=flat)](http://www.apple.com)
+[![CocoaPods](https://img.shields.io/cocoapods/v/AEAccordion.svg?style=flat)](https://cocoapods.org/pods/AEAccordion)
+[![Carthage](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![License MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](LICENSE)
 
-[![CocoaPods Version](https://img.shields.io/cocoapods/v/AEAccordion.svg?style=flat)](https://cocoapods.org/pods/AEAccordion)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
+# AEAccordion
+**UITableViewController with accordion effect (expand / collapse cells)**
 
-> Simple and lightweight solution for making accordion effect in table view controller.  
-> Show detailed content on demand.
+> Simple and lightweight solution for making accordion effect in table view controller. Show detailed content on demand.
 
 ![AEAccordion](http://tadija.net/public/AEAccordion.gif)
 

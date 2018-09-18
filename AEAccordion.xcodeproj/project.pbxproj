@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BD101081EF87D8900C20D72 /* AEAccordion.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BD101061EF87D8900C20D72 /* AEAccordion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BD101101EF87DD500C20D72 /* AccordionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1010E1EF87DD500C20D72 /* AccordionTableViewCell.swift */; };
-		8BD101111EF87DD500C20D72 /* AccordionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD1010F1EF87DD500C20D72 /* AccordionTableViewController.swift */; };
+		8BAA316C2151AED9006142AC /* AEAccordion.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BAA31662151AED5006142AC /* AEAccordion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BAA316D2151AEDE006142AC /* AccordionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAA316A2151AED5006142AC /* AccordionTableViewCell.swift */; };
+		8BAA316E2151AEE0006142AC /* AccordionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAA316B2151AED5006142AC /* AccordionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8BAA31662151AED5006142AC /* AEAccordion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEAccordion.h; sourceTree = "<group>"; };
+		8BAA31672151AED5006142AC /* AEAccordion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AEAccordion.plist; sourceTree = "<group>"; };
+		8BAA316A2151AED5006142AC /* AccordionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionTableViewCell.swift; sourceTree = "<group>"; };
+		8BAA316B2151AED5006142AC /* AccordionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionTableViewController.swift; sourceTree = "<group>"; };
 		8BD101031EF87D8900C20D72 /* AEAccordion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEAccordion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BD101061EF87D8900C20D72 /* AEAccordion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEAccordion.h; sourceTree = "<group>"; };
-		8BD101071EF87D8900C20D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BD1010E1EF87DD500C20D72 /* AccordionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccordionTableViewCell.swift; sourceTree = "<group>"; };
-		8BD1010F1EF87DD500C20D72 /* AccordionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccordionTableViewController.swift; sourceTree = "<group>"; };
 		8BD101131EF87E3D00C20D72 /* AEAccordion.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AEAccordion.podspec; sourceTree = "<group>"; };
 		8BD101141EF87E3D00C20D72 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8BD101151EF87E3D00C20D72 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -36,11 +36,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BAA31652151AED5006142AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8BAA31662151AED5006142AC /* AEAccordion.h */,
+				8BAA31672151AED5006142AC /* AEAccordion.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8BAA31682151AED5006142AC /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8BAA31692151AED5006142AC /* AEAccordion */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8BAA31692151AED5006142AC /* AEAccordion */ = {
+			isa = PBXGroup;
+			children = (
+				8BAA316A2151AED5006142AC /* AccordionTableViewCell.swift */,
+				8BAA316B2151AED5006142AC /* AccordionTableViewController.swift */,
+			);
+			path = AEAccordion;
+			sourceTree = "<group>";
+		};
 		8BD100F91EF87D8900C20D72 = {
 			isa = PBXGroup;
 			children = (
 				8BD101251EF87FFD00C20D72 /* Package.swift */,
-				8BD101051EF87D8900C20D72 /* Sources */,
+				8BAA31652151AED5006142AC /* Resources */,
+				8BAA31682151AED5006142AC /* Sources */,
 				8BD101041EF87D8900C20D72 /* Products */,
 				8BD101161EF87E4000C20D72 /* Supporting Files */,
 			);
@@ -52,25 +79,6 @@
 				8BD101031EF87D8900C20D72 /* AEAccordion.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8BD101051EF87D8900C20D72 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				8BD1010E1EF87DD500C20D72 /* AccordionTableViewCell.swift */,
-				8BD1010F1EF87DD500C20D72 /* AccordionTableViewController.swift */,
-				8BD101121EF87DD900C20D72 /* Supporting Files */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		8BD101121EF87DD900C20D72 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8BD101061EF87D8900C20D72 /* AEAccordion.h */,
-				8BD101071EF87D8900C20D72 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8BD101161EF87E4000C20D72 /* Supporting Files */ = {
@@ -91,7 +99,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BD101081EF87D8900C20D72 /* AEAccordion.h in Headers */,
+				8BAA316C2151AED9006142AC /* AEAccordion.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +130,7 @@
 		8BD100FA1EF87D8900C20D72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = AE;
 				TargetAttributes = {
 					8BD101021EF87D8900C20D72 = {
@@ -165,8 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BD101111EF87DD500C20D72 /* AccordionTableViewController.swift in Sources */,
-				8BD101101EF87DD500C20D72 /* AccordionTableViewCell.swift in Sources */,
+				8BAA316E2151AEE0006142AC /* AccordionTableViewController.swift in Sources */,
+				8BAA316D2151AEDE006142AC /* AccordionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +195,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -194,6 +203,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -227,6 +237,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -247,6 +258,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -254,6 +266,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -279,6 +292,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -297,14 +311,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INFOPLIST_FILE = Resources/AEAccordion.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEAccordion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -319,13 +332,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INFOPLIST_FILE = Resources/AEAccordion.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEAccordion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
